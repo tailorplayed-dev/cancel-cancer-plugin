@@ -1,8 +1,8 @@
 {
   "name": "cancel-cancer",
   "displayName": "Cancel Cancer",
-  "version": "0.0.3",
-  "description": "Cancel Cancer kit: skills for organizing a family member's medical case",
+  "version": "0.1.0",
+  "description": "Cancel Cancer by Benefits: skills that help a family organize everything around a loved one's illness, one skill per episode. Episode 1 sets up the folder map. An organizing tool, not medical, financial or legal advice.",
   "author": {
     "name": "Benefits"
   }
