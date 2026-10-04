@@ -4,8 +4,8 @@ description: Part of the Cancel Cancer kit by Benefits (episode 1 of 14). Sets u
 compatibility: Needs the Claude desktop app with a computer folder connected to the conversation (paid plan). Reads and writes only inside that folder.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.1.0"
-  skill-version: "0.1.0"
+  kit-version: "0.2.0"
+  skill-version: "0.2.0"
   contract: "1"
   episode: "1"
   after: "none"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · הקמת מפת התיקיות (פרק 1)
 
-**שורת הגרסה:** cancel-cancer-setup 0.1.0 · ערכה 0.1.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-setup 0.2.0 · ערכה 0.2.0 · חוזה 1
 
 הסקיל הזה מקים בתיקייה של המשתמש את המבנה שכל הערכה עובדת עליו: תיקייה לכל תחום, `README.md` קצר בעברית בכל תיקייה, ושלושה קבצים בשורש: `kit.md`, `rules.md` ו-`log.md`. זה הסקיל הראשון בערכה. כל הסקילים הבאים, וגם דינו, מוצאים את התיקיות דרך `kit.md` שהוא כותב.
 
@@ -78,8 +78,8 @@ metadata:
 5. **יוצרים,** וכל קובץ רק אם הוא עוד לא קיים. כשהכלים מאפשרים, יוצרים הכל בפעולה אחת, כדי שהמשתמש יאשר פעם אחת:
    - **כל תיקייה,** ובתוכה `README.md` מהתבנית שלה. שם תפקיד בגרשיים הפוכים בתבנית מוחלף בשם התיקייה בפועל.
    - **`rules.md`** בשורש, מהתבנית.
-   - **`kit.md`** בשורש, במבנה שבחוזה (סעיף 4): גרסת החוזה 1, גרסת הערכה 0.1.0, התאריך של היום, טבלת התיקיות עם כל עשרת התפקידים (תפקיד שלא נבחר מקבל `(לא נוצרה)`), מה שהמשתמש סיפר (מה שלא נמסר: "לא נמסר"), הקבצים בשורש, ושורה אחת לסקיל הזה בטבלת הסקילים.
-   - **`log.md`** בשורש. השורה הראשונה בו היא ההקמה, במבנה שבחוזה (סעיף 6). למשל: `2026-01-15 · cancel-cancer-setup 0.1.0 · הקמה: 10 תיקיות עם README, kit.md, rules.md, log.md`
+   - **`kit.md`** בשורש, במבנה שבחוזה (סעיף 4): גרסת החוזה 1, גרסת הערכה (ה-`kit-version` מה-`metadata` של הסקיל הזה), התאריך של היום, טבלת התיקיות עם כל עשרת התפקידים (תפקיד שלא נבחר מקבל `(לא נוצרה)`), מה שהמשתמש סיפר (מה שלא נמסר: "לא נמסר"), הקבצים בשורש, ושורה אחת לסקיל הזה בטבלת הסקילים.
+   - **`log.md`** בשורש. השורה הראשונה בו היא ההקמה, במבנה שבחוזה (סעיף 6). למשל: `2026-01-15 · cancel-cancer-setup 0.2.0 · הקמה: 10 תיקיות עם README, kit.md, rules.md, log.md`
 6. **בודקים:** רואים שוב את רשימת הקבצים. לכל תיקייה שנבחרה יש `README.md`, ובשורש יש `kit.md`, `rules.md` ו-`log.md`. מה שחסר, יוצרים עוד פעם אחת. אם עדיין חסר, ממשיכים לדוח עם `status: partial`, ואומרים מה חסר.
 
 ## שלב 3: הדוח
@@ -161,7 +161,7 @@ metadata:
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-setup 0.1.0 (contract 1)
+skill: cancel-cancer-setup 0.2.0 (contract 1)
 status: done
 wrote: 10 תיקיות עם README.md ; kit.md ; rules.md ; log.md
 for-notion: none
