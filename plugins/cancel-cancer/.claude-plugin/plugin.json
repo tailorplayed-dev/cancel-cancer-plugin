@@ -1,0 +1,9 @@
+{
+  "name": "cancel-cancer",
+  "displayName": "Cancel Cancer",
+  "version": "0.0.1",
+  "description": "Cancel Cancer kit: skills for organizing a family member's medical case",
+  "author": {
+    "name": "Benefits"
+  }
+}

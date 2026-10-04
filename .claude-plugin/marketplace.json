@@ -1,0 +1,14 @@
+{
+  "name": "cancel-cancer-plugin",
+  "description": "Cancel Cancer kit (private test marketplace)",
+  "owner": {
+    "name": "Benefits"
+  },
+  "plugins": [
+    {
+      "name": "cancel-cancer",
+      "source": "./plugins/cancel-cancer",
+      "description": "Cancel Cancer kit: skills for organizing a family member's medical case"
+    }
+  ]
+}
