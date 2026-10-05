@@ -1,11 +1,11 @@
 ---
 name: cancel-cancer-doctor-prep
 description: Part of the Cancel Cancer kit by Benefits (episode 8 of 14). Prepares one page for a meeting with a doctor, to print or open on the phone. The page has the meeting, a short state from the documents only, what changed since the last visit (old then new value, both sources), what is missing, up to eight questions by importance, the documents to bring by number, and what to get at the end (a prescription, letter, referral or signature). Facts carry a source number and date, apart from open questions. A contradiction, two appointment times, a rumor or a supplement is a question, never a fact. No recommendation and no reading of values. Saves the page in the doctor folder with a copy to print. After the meeting, closes the answered questions in Notion and carries the rest to the next meeting. Use when the user says תכין לי דף לפגישה עם הרופא, אני הולך לרופא, תעזור לי להגיע מוכן, הפגישה הייתה, or prepare me for the doctor. Works alone. Comes after cancel-cancer-research-plan and before cancel-cancer-podcast.
-compatibility: Works in any Claude chat on a paid plan. A computer folder connected to the conversation is needed to save the page and its print copy. The Notion connector is optional. Without the folder, the page is built from Notion and shown in the chat. Writes to Notion only questions for the team, their answers after the meeting, and what the meeting set.
+compatibility: Works in any Claude chat on a paid plan. A computer folder connected to the conversation is needed to save the page and its print copy. Code execution and file creation (in Settings) makes the PDF copy; without it, the HTML copy prints from the browser. The Notion connector is optional. Without the folder, the page is built from Notion and shown in the chat. Writes to Notion only questions for the team, their answers after the meeting, and what the meeting set.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.9.0"
-  skill-version: "0.8.0"
+  kit-version: "0.9.1"
+  skill-version: "0.9.1"
   contract: "1"
   episode: "8"
   after: "cancel-cancer-research-plan"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · מגיעים לרופא מוכנים (פרק 8)
 
-**שורת הגרסה:** cancel-cancer-doctor-prep 0.8.0 · ערכה 0.9.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-doctor-prep 0.9.1 · ערכה 0.9.1 · חוזה 1
 
 הסקיל הזה מכין דף אחד לפגישה עם רופא, להדפסה או לטלפון. בדף: מה מתועד, מה השתנה מאז הביקור הקודם, מה חסר, שאלות לפי חשיבות, מסמכים להביא לפי מספר, ומה צריך לקבל בסוף. עובדות עם מקור לחוד, ושאלות פתוחות לחוד. אחרי הפגישה, שאלה שנענתה נסגרת בנושן, ומה שנשאר פתוח עובר לפגישה הבאה.
 
@@ -97,8 +97,8 @@ metadata:
 ### שלב 6: הדף, האורך והשמירה
 
 1. **ממלאים את התבנית,** ועושים את "הבדיקה לפני שמציגים" שבה, כולל בדיקת האורך.
-2. **שומרים** ב-`doctor`, לפי החוזה (סעיף 14): `YYYY-MM-DD-meeting.md` בתאריך הפגישה, ולידו העותק להדפסה, `YYYY-MM-DD-meeting.html`, לפי "העותק להדפסה" בתבנית. בלי תיקייה: לא שומרים.
-3. **בודקים** ששני הקבצים נכתבו. מה שחסר, מנסים עוד פעם אחת. עדיין חסר: `status: partial`, ואומרים מה.
+2. **שומרים** ב-`doctor`, לפי החוזה (סעיף 14): `YYYY-MM-DD-meeting.md` בתאריך הפגישה, ולידו העותק להדפסה, `YYYY-MM-DD-meeting.html`, לפי "העותק להדפסה" בתבנית. ואז ה-PDF, `YYYY-MM-DD-meeting.pdf`, לפי "ה-PDF" בתבנית. בלי תיקייה: לא שומרים.
+3. **בודקים** שה-`.md` וה-`.html` נכתבו. מה שחסר, מנסים עוד פעם אחת. עדיין חסר: `status: partial`, ואומרים מה. PDF שלא נוצר לא הופך את הריצה ל-`partial`: ה-`.html` מחליף אותו.
 
 ### שלב 7: נושן
 
@@ -116,6 +116,10 @@ metadata:
 
 ואחריו הדף עצמו, כמו בתבנית, בלי שורות הפרטים. אחריו:
 
+> **להדפסה ולטלפון:** `doctor/(השם).pdf`. פותחים ומדפיסים, או שולחים לטלפון.
+
+בלי PDF (לא נוצר, או שהבדיקה שלו נכשלה), במקום השורה הזו:
+
 > **להדפסה:** פותחים את `doctor/(השם).html` בלחיצה כפולה, והוא נפתח בדפדפן. לוחצים Ctrl+P (במק: Cmd+P) ומדפיסים. באותו חלון אפשר לבחור Save as PDF, ולשמור PDF.
 
 ואחריהן, רק מה שקרה בפועל, שורה לכל נושא:
@@ -130,7 +134,7 @@ metadata:
 אחר כך:
 
 1. **`kit.md`:** השורה של הסקיל בטבלת הסקילים (אין עדיין: מוסיפים): `דף לפגישה (YYYY-MM-DD): (N) שאלות בדף`.
-2. **`log.md`:** למשל `2026-01-26 · cancel-cancer-doctor-prep 0.8.0 · דף לפגישה: doctor/2026-01-27-meeting.md, 8 שאלות (2 נרשמו בנושן), 6 מסמכים להביא`.
+2. **`log.md`:** למשל `2026-01-26 · cancel-cancer-doctor-prep 0.9.1 · דף לפגישה: doctor/2026-01-27-meeting.md, 8 שאלות (2 נרשמו בנושן), 6 מסמכים להביא`.
 3. **בלוק התוצאה, ואז שורת התחתית.**
 
 ## חלק ב: אחרי הפגישה
@@ -151,7 +155,7 @@ metadata:
 
 ### שלב 10: נושן והדף
 
-1. **הדף, קודם:** הסעיף `## אחרי הפגישה (after)` נוסף פעם אחת, לפני הקו `---` שמעל השורה האחרונה, לפי התבנית. בשורה `אחרי הפגישה (after)` כותבים את התאריך של היום. העותק להדפסה לא משתנה. בדיקת האורך לא חלה על הסעיף הזה.
+1. **הדף, קודם:** הסעיף `## אחרי הפגישה (after)` נוסף פעם אחת, לפני הקו `---` שמעל השורה האחרונה, לפי התבנית. בשורה `אחרי הפגישה (after)` כותבים את התאריך של היום. ה-`.html` וה-PDF לא משתנים. בדיקת האורך לא חלה על הסעיף הזה.
 2. **נושן,** לפי "אחרי הפגישה" ב-`doctor-notion.md`, ובסדר שכתוב שם: שאלה שנענתה ← `בוצע`, עם התשובה. שורות חדשות. התור של הפגישה ← `התקיים`. עדכון של שורה קיימת הוא הבקשה עצמה, ולא צריך עליו אישור. אישור בשלוש שורות רק כשיש יותר מעשר שורות **חדשות**, לפי כלל 5 ב-`doctor-notion.md`. "פשוט תעשה" או "כן" מדלגים.
 3. **בודקים** את מה שנכתב, בנושן ובקובץ.
 
@@ -210,7 +214,7 @@ N ו-M סופרים שאלות בדף (שאלה שאיחדה כמה שורות �
 
 יש גישה לתיקייה, ובנושן שורה פתוחה ב"ממתין למחשב" מהסקיל הזה:
 
-- **"לשמור דף לפגישה":** כותבים ב-`doctor` את הדף מתוך העמוד של השורה, כמו שהוא, ואת העותק להדפסה. בשורה `נכתב (written)`: "(התאריך), בטלפון, מנושן", ובשורה `להדפסה (print)` הנתיב של העותק. אם הפגישה עוד לא הייתה: "רוצים דף מעודכן מהתיקייה, עם ערכי הבדיקות? כתבו 'תכין לי דף לפגישה'."
+- **"לשמור דף לפגישה":** כותבים ב-`doctor` את הדף מתוך העמוד של השורה, כמו שהוא, את העותק להדפסה ואת ה-PDF. בשורה `נכתב (written)`: "(התאריך), בטלפון, מנושן", ובשורה `להדפסה (print)` הנתיבים שלהם. אם הפגישה עוד לא הייתה: "רוצים דף מעודכן מהתיקייה, עם ערכי הבדיקות? כתבו 'תכין לי דף לפגישה'."
 - **"לעדכן את הדף אחרי הפגישה":** מוסיפים לדף את הסעיף מתוך העמוד של השורה.
 - השורה ב"ממתין למחשב" ← `בוצע`, וב`איפה התוצר` הנתיב. ואז `kit.md`, `log.md`, הבלוק ושורת התחתית.
 
@@ -246,9 +250,9 @@ N ו-M סופרים שאלות בדף (שאלה שאיחדה כמה שורות �
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-doctor-prep 0.8.0 (contract 1)
+skill: cancel-cancer-doctor-prep 0.9.1 (contract 1)
 status: done
-wrote: doctor/2026-01-27-meeting.md ; doctor/2026-01-27-meeting.html ; kit.md ; log.md
+wrote: doctor/2026-01-27-meeting.md ; doctor/2026-01-27-meeting.html ; doctor/2026-01-27-meeting.pdf ; kit.md ; log.md
 for-notion: נרשמו 2 שאלות לצוות שלא היו בנושן
 open: לברר את שעת התור לפני הפגישה. עוד 3 שאלות פתוחות בנושן
 next: להדפיס ולקחת את הקלסר. בפגישה כדאי להקליט, אחרי שמבקשים רשות (פרק 10). לנסיעה, פודקאסט (פרק 9)
@@ -259,7 +263,7 @@ next: להדפיס ולקחת את הקלסר. בפגישה כדאי להקלי�
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-doctor-prep 0.8.0 (contract 1)
+skill: cancel-cancer-doctor-prep 0.9.1 (contract 1)
 status: done
 wrote: doctor/2026-01-27-meeting.md (אחרי הפגישה) ; kit.md ; log.md
 for-notion: 3 שאלות נסגרו, 3 שורות חדשות: משימות 2, תורים ואירועים 1. התור סומן "התקיים"

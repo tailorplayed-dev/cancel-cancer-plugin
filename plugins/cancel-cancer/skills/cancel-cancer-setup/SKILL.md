@@ -4,7 +4,7 @@ description: Part of the Cancel Cancer kit by Benefits (episode 1 of 14). Sets u
 compatibility: Needs the Claude desktop app with a computer folder connected to the conversation (paid plan). Reads and writes only inside that folder.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.9.0"
+  kit-version: "0.9.1"
   skill-version: "0.2.0"
   contract: "1"
   episode: "1"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · הקמת מפת התיקיות (פרק 1)
 
-**שורת הגרסה:** cancel-cancer-setup 0.2.0 · ערכה 0.9.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-setup 0.2.0 · ערכה 0.9.1 · חוזה 1
 
 הסקיל הזה מקים בתיקייה של המשתמש את המבנה שכל הערכה עובדת עליו: תיקייה לכל תחום, `README.md` קצר בעברית בכל תיקייה, ושלושה קבצים בשורש: `kit.md`, `rules.md` ו-`log.md`. זה הסקיל הראשון בערכה. כל הסקילים הבאים, וגם דינו, מוצאים את התיקיות דרך `kit.md` שהוא כותב.
 
