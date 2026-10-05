@@ -4,7 +4,7 @@ description: Part of the Cancel Cancer kit by Benefits (episode 7 of 14). Writes
 compatibility: Works in any Claude chat on a paid plan. Running the plan needs Research, from the + menu (paid plans). A computer folder connected to the conversation and the Notion connector are optional. Never runs the research or searches the web itself. Writes to Notion only questions for the team and one source row.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.7.0"
+  kit-version: "0.8.0"
   skill-version: "0.7.0"
   contract: "1"
   episode: "7"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · מחקר מעמיק (פרק 7)
 
-**שורת הגרסה:** cancel-cancer-research-plan 0.7.0 · ערכה 0.7.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-research-plan 0.7.0 · ערכה 0.8.0 · חוזה 1
 
 הסקיל הזה כותב תוכנית מחקר: פרומפט מוכן להדבקה ב-Research של Claude. בפרומפט אין אף פרט מזהה, והוא נגמר במקורות ובשאלות לצוות, ולא בהמלצה. כשהדוח חוזר, הסקיל שומר אותו ב-`research`, והשאלות שבו עוברות לנושן, לרשימה לפגישה עם הרופא.
 
