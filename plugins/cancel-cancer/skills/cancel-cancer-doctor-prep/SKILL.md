@@ -4,7 +4,7 @@ description: Part of the Cancel Cancer kit by Benefits (episode 8 of 14). Prepar
 compatibility: Works in any Claude chat on a paid plan. A computer folder connected to the conversation is needed to save the page and its print copy. Code execution and file creation (in Settings) makes the PDF copy; without it, the HTML copy prints from the browser. The Notion connector is optional. Without the folder, the page is built from Notion and shown in the chat. Writes to Notion only questions for the team, their answers after the meeting, and what the meeting set.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.9.1"
+  kit-version: "0.10.0"
   skill-version: "0.9.1"
   contract: "1"
   episode: "8"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · מגיעים לרופא מוכנים (פרק 8)
 
-**שורת הגרסה:** cancel-cancer-doctor-prep 0.9.1 · ערכה 0.9.1 · חוזה 1
+**שורת הגרסה:** cancel-cancer-doctor-prep 0.9.1 · ערכה 0.10.0 · חוזה 1
 
 הסקיל הזה מכין דף אחד לפגישה עם רופא, להדפסה או לטלפון. בדף: מה מתועד, מה השתנה מאז הביקור הקודם, מה חסר, שאלות לפי חשיבות, מסמכים להביא לפי מספר, ומה צריך לקבל בסוף. עובדות עם מקור לחוד, ושאלות פתוחות לחוד. אחרי הפגישה, שאלה שנענתה נסגרת בנושן, ומה שנשאר פתוח עובר לפגישה הבאה.
 

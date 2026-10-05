@@ -4,7 +4,7 @@ description: Part of the Cancel Cancer kit by Benefits (episode 2 of 14). Builds
 compatibility: Needs the Notion connector, connected under Customize, Connectors. A computer folder is optional. Without one, the links appear only in the report. Writes only inside the Notion page the user chose.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.9.1"
+  kit-version: "0.10.0"
   skill-version: "0.2.0"
   contract: "1"
   episode: "2"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · נושן של הסדרה (פרק 2)
 
-**שורת הגרסה:** cancel-cancer-notion 0.2.0 · ערכה 0.9.1 · חוזה 1
+**שורת הגרסה:** cancel-cancer-notion 0.2.0 · ערכה 0.10.0 · חוזה 1
 
 הסקיל הזה בונה בנושן את השכבה של העובדות הקצרות: עמוד ראשי, ובו שש טבלאות ריקות. הידע המלא נשאר בתיקייה במחשב, וכל שורה בנושן מפנה אליו לפי המספר. אחרי הסקיל הזה, דינו (פרק 3) והסקילים הבאים מוצאים את הטבלאות דרך הקישורים ש-`kit.md` שומר.
 
