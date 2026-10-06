@@ -4,7 +4,7 @@ description: Part of the Cancel Cancer kit by Benefits (episode 4 of 14). Takes 
 compatibility: Needs the Claude desktop app with a computer folder connected to the conversation (paid plan). The Notion connector is optional; without it the rows are shown to copy. Reads PDF scans and photos (JPG, PNG). Moves files only from inbox to documents and never deletes.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.10.0"
+  kit-version: "0.11.0"
   skill-version: "0.4.0"
   contract: "1"
   episode: "4"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · דפים חדשים שהגיעו (פרק 4)
 
-**שורת הגרסה:** cancel-cancer-intake 0.4.0 · ערכה 0.10.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-intake 0.4.0 · ערכה 0.11.0 · חוזה 1
 
 הסקיל הזה קולט דפים שהמשתמש סרק או צילם ושם ב-`inbox`. לכל דף או חוברת יש מספר. הטקסט המלא נשמר ב-`documents` באותו מספר, עם "עיקרי המסמך" למעלה. הסריקה עוברת לשם, והעובדות נרשמות בנושן עם אותו מספר מקור. מה שלא קריא לא מנוחש: הוא מסומן, והסקיל שואל עליו.
 
