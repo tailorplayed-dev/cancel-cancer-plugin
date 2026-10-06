@@ -4,7 +4,7 @@ description: Part of the Cancel Cancer kit by Benefits (episode 10 of 14). Turns
 compatibility: Works in any Claude chat on a paid plan. Transcription runs in Gemini Notebook with a Google account, on the web or in the phone app. The user uploads the recording and pastes the prompt, and the skill never listens to audio or connects to the notebook. A computer folder connected to the conversation is needed to save the transcript and to move the audio file from inbox to recordings. The Notion connector is optional. Never writes medications to Notion.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.11.0"
+  kit-version: "0.12.0"
   skill-version: "0.10.0"
   contract: "1"
   episode: "10"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · הקלטה של ארבעים דקות (פרק 10)
 
-**שורת הגרסה:** cancel-cancer-recording 0.10.0 · ערכה 0.11.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-recording 0.10.0 · ערכה 0.12.0 · חוזה 1
 
 הסקיל הזה הופך הקלטה של פגישה עם הצוות לסדר. יש לו שני חלקים. **א:** עד שתי שאלות קצרות, ופרומפט להדבקה ב-Gemini Notebook, שמבקש תמלול וניתוח מסודר. **ב:** כשהתוצאה מודבקת בחזרה, הטקסט המלא נשמר ב-`transcripts`, המשימות והתורים נרשמים בנושן, שאלה שנענתה נסגרת, ופתוחה עוברת לפגישה הבאה. כל תרופה, מינון, מספר ותאריך מסומנים "לבדוק מול הנייר".
 
