@@ -4,8 +4,8 @@ description: Part of the Cancel Cancer kit by Benefits (episode 8 of 14). Prepar
 compatibility: Works in any Claude chat on a paid plan. A computer folder connected to the conversation is needed to save the page and its print copy. Code execution and file creation (in Settings) makes the PDF copy; without it, the HTML copy prints from the browser. The Notion connector is optional. Without the folder, the page is built from Notion and shown in the chat. Writes to Notion only questions for the team, their answers after the meeting, and what the meeting set.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.13.0"
-  skill-version: "0.9.1"
+  kit-version: "0.14.0"
+  skill-version: "0.14.0"
   contract: "1"
   episode: "8"
   after: "cancel-cancer-research-plan"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · מגיעים לרופא מוכנים (פרק 8)
 
-**שורת הגרסה:** cancel-cancer-doctor-prep 0.9.1 · ערכה 0.13.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-doctor-prep 0.14.0 · ערכה 0.14.0 · חוזה 1
 
 הסקיל הזה מכין דף אחד לפגישה עם רופא, להדפסה או לטלפון. בדף: מה מתועד, מה השתנה מאז הביקור הקודם, מה חסר, שאלות לפי חשיבות, מסמכים להביא לפי מספר, ומה צריך לקבל בסוף. עובדות עם מקור לחוד, ושאלות פתוחות לחוד. אחרי הפגישה, שאלה שנענתה נסגרת בנושן, ומה שנשאר פתוח עובר לפגישה הבאה.
 
@@ -134,7 +134,7 @@ metadata:
 אחר כך:
 
 1. **`kit.md`:** השורה של הסקיל בטבלת הסקילים (אין עדיין: מוסיפים): `דף לפגישה (YYYY-MM-DD): (N) שאלות בדף`.
-2. **`log.md`:** למשל `2026-01-26 · cancel-cancer-doctor-prep 0.9.1 · דף לפגישה: doctor/2026-01-27-meeting.md, 8 שאלות (2 נרשמו בנושן), 6 מסמכים להביא`.
+2. **`log.md`:** למשל `2026-01-26 · cancel-cancer-doctor-prep 0.14.0 · דף לפגישה: doctor/2026-01-27-meeting.md, 8 שאלות (2 נרשמו בנושן), 6 מסמכים להביא`.
 3. **בלוק התוצאה, ואז שורת התחתית.**
 
 ## חלק ב: אחרי הפגישה
@@ -250,7 +250,7 @@ N ו-M סופרים שאלות בדף (שאלה שאיחדה כמה שורות �
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-doctor-prep 0.9.1 (contract 1)
+skill: cancel-cancer-doctor-prep 0.14.0 (contract 1)
 status: done
 wrote: doctor/2026-01-27-meeting.md ; doctor/2026-01-27-meeting.html ; doctor/2026-01-27-meeting.pdf ; kit.md ; log.md
 for-notion: נרשמו 2 שאלות לצוות שלא היו בנושן
@@ -263,7 +263,7 @@ next: להדפיס ולקחת את הקלסר. בפגישה כדאי להקלי�
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-doctor-prep 0.9.1 (contract 1)
+skill: cancel-cancer-doctor-prep 0.14.0 (contract 1)
 status: done
 wrote: doctor/2026-01-27-meeting.md (אחרי הפגישה) ; kit.md ; log.md
 for-notion: 3 שאלות נסגרו, 3 שורות חדשות: משימות 2, תורים ואירועים 1. התור סומן "התקיים"

@@ -4,7 +4,7 @@ description: Part of the Cancel Cancer kit by Benefits (episode 5 of 14). Reads 
 compatibility: Needs the Gmail connector, connected under Customize, Connectors, and one Gmail label for the family member. A computer folder connected to the conversation and the Notion connector are optional. Only reads Gmail and never changes anything in the mailbox.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.13.0"
+  kit-version: "0.14.0"
   skill-version: "0.5.0"
   contract: "1"
   episode: "5"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · המייל: קריאה ואיסוף (פרק 5)
 
-**שורת הגרסה:** cancel-cancer-mail-collect 0.5.0 · ערכה 0.13.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-mail-collect 0.5.0 · ערכה 0.14.0 · חוזה 1
 
 הסקיל הזה עובר על המיילים בתווית אחת ב-Gmail, זו שהמשתמש יצר בשביל מי שהוא מלווה. הוא אומר מה ביקשו ועד מתי, רושם כל בקשה כמשימה בנושן עם תאריך, ומכין רשימה של הקבצים המצורפים לשמור ב-`inbox`. החיבור ל-Gmail רואה רק את השמות של הקבצים, לא את מה שבתוכם. לכן הקבצים נקראים רק כשהם ב-`inbox`, בסקיל של פרק 4. ב-Gmail הסקיל רק קורא.
 

@@ -4,7 +4,7 @@ description: Part of the Cancel Cancer kit by Benefits (episode 9 of 14). Packs 
 compatibility: Works in any Claude chat on a paid plan. A computer folder connected to the conversation is needed to read the documents and save the package. The Notion connector is optional. Without the folder, a small source is built from Notion and shown in the chat, to paste as Copied Text. Listening needs a Google account and Gemini Notebook, on the web and in the phone app. Writes to Notion only questions for the team, and on the phone one row in Waiting for the computer.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.13.0"
+  kit-version: "0.14.0"
   skill-version: "0.9.0"
   contract: "1"
   episode: "9"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · פודקאסט אישי לכל נסיעה (פרק 9)
 
-**שורת הגרסה:** cancel-cancer-podcast 0.9.0 · ערכה 0.13.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-podcast 0.9.0 · ערכה 0.14.0 · חוזה 1
 
 הסקיל הזה אורז חבילה להאזנה ב-Gemini Notebook: אחד עד ארבעה מקורות, רק מה שקשור לנושא, הנחיה קצרה למנחים, והסבר איך מעלים ומקשיבים. המשתמש מעלה מהמחשב, ומקשיב באפליקציה בטלפון. הסקיל לא מתחבר ל-Gemini Notebook.
 

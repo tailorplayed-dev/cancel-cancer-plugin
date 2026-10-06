@@ -1,11 +1,11 @@
 ---
 name: cancel-cancer-money
 description: Part of the Cancel Cancer kit by Benefits (episode 11 of 14). Sorts bank and card charge files (Excel, CSV or PDF) in the money folder. Groups charges by vendor with a sum per month, merging names written in several forms, and finds what repeats every month, possible duplicates (same vendor, amount and day, a receipt in documents can confirm one), and what is odd (a closed card still charged, abroad, a sudden jump). Matches card payments in the bank to the card files. Every note points to the file, sheet, row, date and amount. A vendor with no clear name stays unidentified until the user marks it. Gives a list to mark known or unknown, and an unknown one becomes a Notion task to find out what it is. Never says to cancel, move, withdraw or keep, and never writes a full card or account number. Use when the user says תעשה לי סדר בחיובים, תעבור על החיובים, מה זה החיוב הזה, יש פה משהו כפול, or sort the charges. Works alone. Comes after cancel-cancer-recording and before cancel-cancer-web-pull.
-compatibility: Works in any Claude chat on a paid plan. A computer folder connected to the conversation is needed to read the files in the money folder and save the summary. Excel files and the Excel copy need Code execution and file creation (in Settings). Without the folder, a file attached to the message is sorted in the chat. The Notion connector is optional. Writes to Notion only tasks (check with a company, find out what a charge is) and, on the phone, one row in Waiting for the computer.
+compatibility: Works in any Claude chat on a paid plan. A computer folder connected to the conversation is needed to read the files in the money folder and save the summary. Excel files, the Excel copy and the PDF copy need Code execution and file creation (in Settings). Without the folder, a file attached to the message is sorted in the chat. The Notion connector is optional. Writes to Notion only tasks (check with a company, find out what a charge is) and, on the phone, one row in Waiting for the computer.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.13.0"
-  skill-version: "0.11.0"
+  kit-version: "0.14.0"
+  skill-version: "0.14.0"
   contract: "1"
   episode: "11"
   after: "cancel-cancer-recording"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · סדר בחיובים (פרק 11)
 
-**שורת הגרסה:** cancel-cancer-money 0.11.0 · ערכה 0.13.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-money 0.14.0 · ערכה 0.14.0 · חוזה 1
 
 הסקיל הזה עושה סדר בקובצי החיובים מהבנק ומחברות האשראי: ממיין לפי ספק, עם סכום לכל חודש, מוצא מה חוזר כל חודש, מה אולי כפול ומה מוזר, ונותן רשימה שבה המשתמש מסמן מה מוכר לו ומה לא. כל הערה מצביעה על השורה בקובץ, כדי שאפשר יהיה לבדוק. הסקיל לא יועץ פיננסי: הוא ממיין, מסמן ושואל, ואת ההחלטות מקבלים המשתמשים.
 
@@ -23,7 +23,7 @@ metadata:
 - `references/cancel-cancer-contract.md`: החוזה של הערכה. שמות הקבצים והחריג של `inbox` (סעיף 3), שלב 0 (סעיף 5), הסיום (סעיפים 6 עד 8), פרטים רגישים (סעיף 9), נושן (סעיף 10), `NNNN.md` (סעיף 11, בשביל הקבלות), וסעיף 17.
 - `references/reading-files.md`: איך פותחים אקסל, CSV ו-PDF, מה לוקחים מכל שורה, ההפניה לשורה, איך קובץ מגיע ל-`money`, ופרטים רגישים בקובץ. קוראים אותו לפני הקובץ הראשון.
 - `references/sorting-rules.md`: הספק והאיחוד, חוזר, כפילות ו"לבדוק", הקבלות, מוזר, ההצלבה עם הבנק, לא מזוהה, ומה אף פעם לא נכתב. קוראים אותו לפני שלב 3.
-- `references/charges-template.md`: התבנית של הסיכום, הבדיקה לפני ששומרים, והעותק באקסל. קוראים אותו לפני שכותבים סיכום.
+- `references/charges-template.md`: התבנית של הסיכום, הבדיקה לפני ששומרים, העותק באקסל, והעותק להדפסה וה-PDF. קוראים אותו לפני שכותבים סיכום.
 - `references/marking-list.md`: הרשימה לסימון, איך מציגים אותה, ואיך מבינים את התשובה. קוראים אותו לפני שלב 4, ולפני חלק ב.
 - `references/money-notion.md`: מה קוראים מנושן, ואילו משימות כותבים בו. קוראים אותו לפני הקריאה הראשונה לנושן.
 - `references/notion-format.md`: איך עובדים מול החיבור של Notion. קוראים אותו לפני הכתיבה הראשונה לנושן.
@@ -55,7 +55,7 @@ metadata:
 
 קוראים את `references/reading-files.md`.
 
-1. **ב-`money`:** כל קובץ, חוץ מ-`README.md` ומהסיכומים (`-summary.md`, `-summary.xlsx`). קובץ שהמשתמש שמר בתיקייה הזו נשאר במקום ובשם שלו.
+1. **ב-`money`:** כל קובץ, חוץ מ-`README.md` ומהסיכומים (`-summary.md`, `-summary.xlsx`, `-summary.html`, `-summary.pdf`). קובץ שהמשתמש שמר בתיקייה הזו נשאר במקום ובשם שלו.
 2. **ב-`inbox`:** קובץ חיובים או דף חשבון עובר ל-`money`, לפי "איך קובץ מגיע ל-money" ב-`reading-files.md`. הבקשה "תעשה לי סדר בחיובים" היא הבקשה להעביר (החוזה, סעיף 17). Claude עשוי לבקש אישור על ההעברה. זה תקין. קבלה, מכתב או טופס נשארים ב-`inbox`, עם השורה עליהם מ-`reading-files.md`.
 3. **קובץ שצורף להודעה:** נשמר ב-`money`, לפי אותו קובץ.
 4. **הבקשה אמרה איזה קובץ או איזו תקופה** ("רק את הכרטיס שמסתיים ב-4821", "רק מרץ"): רק אותם. אחרת כל הקבצים, כי מה שחוזר נראה רק לאורך כמה חודשים.
@@ -96,8 +96,8 @@ metadata:
 קוראים את `references/charges-template.md`.
 
 1. **ממלאים את התבנית,** ועושים את "הבדיקה לפני ששומרים".
-2. **שומרים** ב-`money`, לפי החוזה: `YYYY-MM-summary.md`, בשנה ובחודש של היום. ואז העותק באקסל, `YYYY-MM-summary.xlsx`, לפי "העותק באקסל". בלי תיקייה: לא שומרים.
-3. **בודקים** שה-`.md` נכתב, ושהקובץ המקורי לא השתנה. לא נכתב: עוד ניסיון אחד. עדיין לא: `status: partial`, ואומרים מה. אקסל שלא נוצר לא הופך את הריצה ל-`partial`.
+2. **שומרים** ב-`money`, לפי החוזה: `YYYY-MM-summary.md`, בשנה ובחודש של היום. ואז העותק באקסל, `YYYY-MM-summary.xlsx`, לפי "העותק באקסל", והעותק להדפסה, `YYYY-MM-summary.html` ו-`YYYY-MM-summary.pdf`, לפי "העותק להדפסה וה-PDF". בלי תיקייה: לא שומרים.
+3. **בודקים** שה-`.md` נכתב, ושהקובץ המקורי לא השתנה. לא נכתב: עוד ניסיון אחד. עדיין לא: `status: partial`, ואומרים מה. אקסל או PDF שלא נוצרו לא הופכים את הריצה ל-`partial`.
 
 ### שלב 6: נושן
 
@@ -138,6 +138,7 @@ metadata:
 - **הקבצים:** מה עבר מ-`inbox`, קובץ שלא נפתח ולמה, קבצים חופפים, סה"כ שלא מתאים, ושם עם מספר ארוך. השורות מ-`reading-files.md`.
 - **חודש אחד:** השורה מ-`sorting-rules.md`.
 - **האקסל:** "יש גם עותק באקסל, עם עמודת הערות ליד כל שורה: `money/(השם).xlsx`. הקובץ המקורי לא השתנה." או השורה של "האקסל כאן בשיחה".
+- **להדפסה ולטלפון:** "`money/(השם).pdf`. פותחים ומדפיסים, או שולחים לטלפון." בלי PDF: השורה של ה-`.html` מ"העותק להדפסה וה-PDF", או "ה-PDF כאן בשיחה".
 - **נושן:** "רשמתי (N) משימות לבדוק מול החברה." משימה שכבר הייתה: "(K) כבר היו בנושן, ולא נרשמו שוב." בלי נושן: הטבלה להעתקה.
 - **חשוד:** פעם אחת.
 - **שאלות למשתמש:** עד שלוש, החשובה קודם. למשל לאיזה כרטיס שייך חיוב בבנק, או מתי נסגר כרטיס.
@@ -145,7 +146,7 @@ metadata:
 אחר כך:
 
 1. **`kit.md`:** השורה של הסקיל בטבלת הסקילים (אין עדיין: מוסיפים): `סדר בחיובים (YYYY-MM-DD): (N) קבצים, (M) ספקים`. בלי סכומים ובלי מספרי כרטיסים.
-2. **`log.md`:** למשל `2026-04-02 · cancel-cancer-money 0.11.0 · סדר בחיובים: money/2026-04-summary.md (3 קבצים, 146 שורות, 38 ספקים, 7 חוזרים, 2 לא מזוהים), 3 משימות בנושן`.
+2. **`log.md`:** למשל `2026-04-02 · cancel-cancer-money 0.14.0 · סדר בחיובים: money/2026-04-summary.md (3 קבצים, 146 שורות, 38 ספקים, 7 חוזרים, 2 לא מזוהים), 3 משימות בנושן`.
 3. **בלוק התוצאה, ואז שורת התחתית.**
 
 ## חלק ב: הסימון
@@ -253,9 +254,9 @@ metadata:
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-money 0.11.0 (contract 1)
+skill: cancel-cancer-money 0.14.0 (contract 1)
 status: done
-wrote: money/2026-04-summary.md ; money/2026-04-summary.xlsx ; kit.md ; log.md
+wrote: money/2026-04-summary.md ; money/2026-04-summary.xlsx ; money/2026-04-summary.html ; money/2026-04-summary.pdf ; kit.md ; log.md
 for-notion: נרשמו 3 משימות לבדוק מול החברה
 open: לסמן ברשימה מה מוכר ומה לא (9 ספקים), ואיזה כרטיס נסגר
 next: לסמן את הרשימה. אחר כך, פרק 12: מידע מאתרים ציבוריים
@@ -266,7 +267,7 @@ next: לסמן את הרשימה. אחר כך, פרק 12: מידע מאתרים 
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-money 0.11.0 (contract 1)
+skill: cancel-cancer-money 0.14.0 (contract 1)
 status: done
 wrote: money/2026-04-summary.md (הסימון) ; kit.md ; log.md
 for-notion: נרשמו 2 משימות "לברר מה זה"
