@@ -4,7 +4,7 @@ description: Part of the Cancel Cancer kit by Benefits (episode 12 of 14). Gets 
 compatibility: Works in any Claude chat on a paid plan. The prompt runs in the Claude in Chrome extension, in Chrome on a computer (paid plans), in its own side panel. A computer folder connected to the conversation and the Notion connector are optional. Never opens a browser or a site itself, never logs in, and never asks for a password or code. Writes to Notion only tasks (check eligibility, check a payment with the body) and one source row.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.12.0"
+  kit-version: "0.13.0"
   skill-version: "0.12.0"
   contract: "1"
   episode: "12"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · מידע מאתרים (פרק 12)
 
-**שורת הגרסה:** cancel-cancer-web-pull 0.12.0 · ערכה 0.12.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-web-pull 0.12.0 · ערכה 0.13.0 · חוזה 1
 
 הסקיל הזה עוזר להוציא מידע מאתרים, בשלוש דרכים, לפי סוג האתר. **אתר ציבורי:** הוא כותב פרומפט לתוסף Claude in Chrome, והתוצאה חוזרת לתיקייה. **אזור אישי:** אתם נכנסים ומורידים את המסמך, והסקיל קורא אותו מהתיקייה ומצליב אותו עם הבנק. **הרשאות רשמיות:** בקופות יש הרשאה לבן משפחה, במקום להשתמש בסיסמה של המטופל.
 

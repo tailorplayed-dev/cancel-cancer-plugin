@@ -7,4 +7,4 @@ description: Update check for the Cancel Cancer plugin. Use when the user asks w
 
 ענה בשורה אחת בדיוק, בלי שום תוספת:
 
-גרסת בדיקה 0.12.0
+גרסת בדיקה 0.13.0

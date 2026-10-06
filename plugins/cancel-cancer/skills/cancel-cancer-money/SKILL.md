@@ -4,7 +4,7 @@ description: Part of the Cancel Cancer kit by Benefits (episode 11 of 14). Sorts
 compatibility: Works in any Claude chat on a paid plan. A computer folder connected to the conversation is needed to read the files in the money folder and save the summary. Excel files and the Excel copy need Code execution and file creation (in Settings). Without the folder, a file attached to the message is sorted in the chat. The Notion connector is optional. Writes to Notion only tasks (check with a company, find out what a charge is) and, on the phone, one row in Waiting for the computer.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.12.0"
+  kit-version: "0.13.0"
   skill-version: "0.11.0"
   contract: "1"
   episode: "11"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · סדר בחיובים (פרק 11)
 
-**שורת הגרסה:** cancel-cancer-money 0.11.0 · ערכה 0.12.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-money 0.11.0 · ערכה 0.13.0 · חוזה 1
 
 הסקיל הזה עושה סדר בקובצי החיובים מהבנק ומחברות האשראי: ממיין לפי ספק, עם סכום לכל חודש, מוצא מה חוזר כל חודש, מה אולי כפול ומה מוזר, ונותן רשימה שבה המשתמש מסמן מה מוכר לו ומה לא. כל הערה מצביעה על השורה בקובץ, כדי שאפשר יהיה לבדוק. הסקיל לא יועץ פיננסי: הוא ממיין, מסמן ושואל, ואת ההחלטות מקבלים המשתמשים.
 
