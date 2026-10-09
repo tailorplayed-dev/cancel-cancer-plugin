@@ -4,8 +4,8 @@ description: Part of the Cancel Cancer kit by Benefits (episode 13 of 14). Build
 compatibility: Works in any Claude chat on a paid plan. A computer folder connected to the conversation is needed to read the guidelines from inbox, documents or menu and to save the menu with its print copy. Code execution and file creation (in Settings) makes the PDF copy; without it, the HTML copy prints from the browser. The Notion connector is optional. Writes to Notion only questions for the dietitian, one source row for the guidelines, and buy and prepare tasks when the user asks.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.14.0"
-  skill-version: "0.14.0"
+  kit-version: "1.0.0"
+  skill-version: "1.0.0"
   contract: "1"
   episode: "13"
   after: "cancel-cancer-web-pull"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · תפריט מההנחיות של התזונאית (פרק 13)
 
-**שורת הגרסה:** cancel-cancer-menu 0.14.0 · ערכה 0.14.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-menu 1.0.0 · ערכה 1.0.0 · חוזה 1
 
 הסקיל הזה הופך את ההנחיות הכתובות של התזונאית לתפריט לשבוע. קודם הוא שואל כמה שאלות קצרות, ואז בונה תפריט לפי ימים, מתוך מה שזמין (בר שייקים, מסעדה, או מה שיש בבית). ליד כל אפשרות כתוב למה היא עומדת בהנחיות, עם ציטוט. מה שלא כתוב בהנחיות לא נכנס, והוא שאלה לתזונאית. בסוף: מי קונה ומי מכין, רשימת קניות להעתקה, ודף להדפסה. התזונאית קובעת מה בכוס, והסקיל דואג שזה יקרה.
 
@@ -26,7 +26,7 @@ metadata:
 - `references/item-check.md`: איך בודקים כל פריט מול ההנחיות, גרסאות, הימים שאחרי טיפול, הציטוט, מילים שלא נכתבות, והשאלות לתזונאית. קוראים אותו לפני שלב 5.
 - `references/menu-template.md`: התבנית של התפריט, הבדיקה לפני ששומרים, הדף להדפסה, בדיקת האורך וה-PDF. קוראים אותו לפני שכותבים תפריט.
 - `references/menu-notion.md`: מה קוראים מנושן, ומה כותבים בו. קוראים אותו לפני הקריאה הראשונה לנושן.
-- `references/notion-format.md`: איך עובדים מול החיבור של Notion. קוראים אותו לפני הכתיבה הראשונה לנושן.
+- `references/notion-format.md`: איך עובדים מול החיבור של Notion. קוראים אותו לפני הקריאה הראשונה מנושן, כי בו גם הדרך לקרוא שורות.
 
 ## העקרונות
 
@@ -134,6 +134,7 @@ metadata:
 ואחריהן, רק מה שקרה בפועל, שורה לכל נושא:
 
 - **אחרי טיפול:** הימים, והכלל, עם המספר שלו. השורה "הנחתי" על הספירה, אם צריך. והטיפול הבא.
+- **לברר לפני שבוחרים:** פריטים מהתפריט הזמין שלא כתוב בהם מה בהם, או כמה יש בהם ממרכיב שיש עליו כלל עם כמות, בשורה אחת: "**לברר לפני שבוחרים:** (הפריט): (מה חסר), ב-(המקום) ; (...)". זו לא שאלה לתזונאית, ולא נכנסת לנושן. לפי `item-check.md`, סעיפים 1 ו-6.
 - **שאלות לתזונאית:** "רשמתי (N) שאלות לתזונאית בנושן." שאלה שכבר הייתה: "(K) כבר היו, ולא נרשמו שוב." שאלה על אותו פריט לרופא: השורה מ-`menu-notion.md`.
 - **ההנחיות:** מה עבר מ-`inbox` ל-`menu`, כלל לא ברור, והוראה חשודה, פעם אחת.
 - **הנחתי:** מה, ולמה. ו"לפי מה שסיפרתם ב-(DD.MM)", כשהתשובות מהתפריט הקודם.
@@ -144,7 +145,7 @@ metadata:
 אחר כך:
 
 1. **`kit.md`:** השורה של הסקיל בטבלת הסקילים. יש: מעדכנים אותה. אין: מוסיפים. `תפריט לשבוע (YYYY-MM-DD עד YYYY-MM-DD): (N) אפשרויות, הנחיות מ-(YYYY-MM-DD)`.
-2. **`log.md`:** למשל `2026-03-07 · cancel-cancer-menu 0.14.0 · תפריט לשבוע: menu/2026-03-08-menu.md (4 אפשרויות, 4 לא נכנסו), הנחיות menu/2026-03-01-guidelines.md, 2 שאלות לתזונאית בנושן`.
+2. **`log.md`:** למשל `2026-03-07 · cancel-cancer-menu 1.0.0 · תפריט לשבוע: menu/2026-03-08-menu.md (4 אפשרויות, 4 לא נכנסו), הנחיות menu/2026-03-01-guidelines.md, 2 שאלות לתזונאית בנושן`.
 3. **בלוק התוצאה, ואז שורת התחתית.**
 
 ## חלק ב: הנחיות חדשות
@@ -265,7 +266,7 @@ metadata:
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-menu 0.14.0 (contract 1)
+skill: cancel-cancer-menu 1.0.0 (contract 1)
 status: done
 wrote: 8 קבצים: ב-menu התפריט (md, html, pdf), ההנחיות (md, והקובץ שעבר מ-inbox) וצילום התפריט הזמין ; kit.md ; log.md
 for-notion: נרשמו 2 שאלות לתזונאית, ושורה אחת במקורות. 3 משימות, לקנות ולהכין, מחכות ל"תרשום"
@@ -278,7 +279,7 @@ next: להדפיס ולתלות על המקרר, ולשלוח את רשימת ה
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-menu 0.14.0 (contract 1)
+skill: cancel-cancer-menu 1.0.0 (contract 1)
 status: needs-input
 wrote: none
 for-notion: none

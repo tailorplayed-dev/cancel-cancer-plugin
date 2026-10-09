@@ -55,6 +55,7 @@
 מה להחזיר:
 השורה הראשונה, בדיוק כך: "תוצאה מאתר ציבורי: (הנושא, במילים כלליות)"
 ואחריה טבלה, שורה לכל פריט שנמצא, עד 25 שורות. יש עוד: לכתוב בסוף "יש עוד", ואת הכתובת של העמוד שבו הם.
+פריט בלי קישור לא נכנס לטבלה.
 | # | שם | תיאור קצר | למי, לפי האתר | איך מגישים | קישור |
 - שם: כמו שכתוב באתר.
 - למי, לפי האתר: התנאים במילים של האתר. מה שלא כתוב: "לא כתוב באתר".
@@ -75,7 +76,7 @@
 
 1. אין בו אף אחד מהפרטים בטבלה "מה אף פעם לא נכנס".
 2. האתר ציבורי, לפי הטבלה למעלה.
-3. כל שש השורות של "איך לעבוד" נמצאות, כמו שהן.
+3. כל שש השורות של "איך לעבוד" נמצאות, כמו שהן, וגם השורה "פריט בלי קישור לא נכנס לטבלה".
 4. אין בו בקשה להתחבר, למלא, לשלוח, להוריד, לקבוע זכאות או להמליץ.
 
 ## איך מריצים (שלושה צעדים)
@@ -113,6 +114,7 @@ How to work:
 What to return:
 The first line, exactly: "Result from a public site: (the topic, in general words)"
 Then a table, one row per item found, up to 25 rows. If there are more: write "there are more" at the end, with the address of the page where they are.
+An item without a link does not go into the table.
 | # | Name | Short description | Who it is for, according to the site | How to apply | Link |
 - Name: as written on the site.
 - Who it is for: the conditions in the site's words. If not written: "not written on the site".

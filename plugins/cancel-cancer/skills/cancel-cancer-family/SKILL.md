@@ -4,8 +4,8 @@ description: Part of the Cancel Cancer kit by Benefits (episode 14 of 14). Gathe
 compatibility: Works in any Claude chat on a paid plan. A connected computer folder is needed to read the documents behind each call and save the split and pages with print copies. Code execution and file creation (in Settings) makes the PDF, or the HTML copy prints from the browser. Notion is optional. On the phone, pages come as WhatsApp text. Never calls or sends. Writes to Notion only tasks, owners, what came back from calls, an appointment set in one, a family member after a yes, and one pending row.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.14.0"
-  skill-version: "0.14.0"
+  kit-version: "1.0.0"
+  skill-version: "1.0.0"
   contract: "1"
   episode: "14"
   after: "cancel-cancer-menu"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · כולם בשביל אחת (פרק 14)
 
-**שורת הגרסה:** cancel-cancer-family 0.14.0 · ערכה 0.14.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-family 1.0.0 · ערכה 1.0.0 · חוזה 1
 
 הסקיל הזה אוסף את כל המשימות הפתוחות למקום אחד, ומחלק אותן בין בני המשפחה לפי תחום אחריות, כך שכל אחד עושה סבב טלפונים בתחום אחד. לכל אחד יש דף אחד: למי מתקשרים, מה אומרים, מה שואלים ומה צריך לברר, לפי נושאים. כשמסיימים, מסמנים ומחזירים, והסקיל מעדכן בנושן לכולם. זה הסקיל האחרון בערכה.
 
@@ -25,7 +25,7 @@ metadata:
 - `references/page-template.md`: התבנית של הדף, מה נכנס לכל חלק ומה אף פעם לא, בדיקת האורך, העותק להדפסה, ה-PDF, הטקסט לוואטסאפ, והסעיף "מה חזר". קוראים אותו לפני שכותבים דף.
 - `references/returned-page.md`: איך קוראים דף שחזר (טקסט או צילום), איך ממיינים את מה שחזר, "פתוח עכשיו" לכולם, והדוח. קוראים אותו לפני חלק ג.
 - `references/family-notion.md`: מה קוראים מנושן, ומה כותבים בו בחלוקה ואחרי סבב. קוראים אותו לפני הקריאה הראשונה לנושן.
-- `references/notion-format.md`: איך עובדים מול החיבור של Notion. קוראים אותו לפני הכתיבה הראשונה לנושן.
+- `references/notion-format.md`: איך עובדים מול החיבור של Notion. קוראים אותו לפני הקריאה הראשונה מנושן, כי בו גם הדרך לקרוא שורות.
 
 ## העקרונות
 
@@ -124,7 +124,7 @@ metadata:
 אחר כך:
 
 1. **`kit.md`:** השורה של הסקיל בטבלת הסקילים (אין עדיין: מוסיפים): `חלוקה (YYYY-MM-DD): (N) משימות, (K) אנשים`.
-2. **`log.md`:** למשל `2026-02-16 · cancel-cancer-family 0.14.0 · חלוקה: family/2026-02-16-tasks.md, 17 משימות (3 אוחדו), 2 אנשים, 2 בלי אחראי, 3 נרשמו בנושן`.
+2. **`log.md`:** למשל `2026-02-16 · cancel-cancer-family 1.0.0 · חלוקה: family/2026-02-16-tasks.md, 17 משימות (3 אוחדו), 2 אנשים, 2 בלי אחראי, 3 נרשמו בנושן`.
 3. **בלוק התוצאה, ואז שורת התחתית.**
 
 ## חלק ב: דף לכל אחד
@@ -164,7 +164,7 @@ metadata:
 
 **בלי PDF:** קובץ `.html` לא נוח לפתוח בטלפון. לכן לכל בן משפחה, חוץ מהמשתמש עצמו, הדף כטקסט לוואטסאפ, בבלוק קוד, במקום ההודעה הקצרה, לפי "הטקסט לוואטסאפ" בתבנית. המשתמש מדפיס את הדף שלו מה-`.html`. ובמקום השורה של ה-PDF: "**להדפסה:** פותחים את `family/(השם).html` בלחיצה כפולה, והוא נפתח בדפדפן. Ctrl+P (במק: Cmd+P) מדפיס, ובאותו חלון אפשר לבחור Save as PDF." ואחרי כל זה, רק מה שקרה: מה לא נכנס לדף ונשאר בנושן, מי בלי דף, ושאלות למשתמש (עד שלוש). ובסוף: "כשמישהו מסיים, מחזירים לכאן את הדף המסומן (צילום מספיק), או הודעה עם המספרים."
 
-אחר כך: `kit.md` (`דפים (YYYY-MM-DD): (K) דפים`), `log.md` (למשל `2026-02-16 · cancel-cancer-family 0.14.0 · דפים: family/2026-02-16-page-1.md ו-page-2.md, עם html ו-pdf`), בלוק התוצאה ושורת התחתית.
+אחר כך: `kit.md` (`דפים (YYYY-MM-DD): (K) דפים`), `log.md` (למשל `2026-02-16 · cancel-cancer-family 1.0.0 · דפים: family/2026-02-16-page-1.md ו-page-2.md, עם html ו-pdf`), בלוק התוצאה ושורת התחתית.
 
 ## חלק ג: הדף חזר
 
@@ -174,7 +174,7 @@ metadata:
 
 1. **איזה דף,** לפי סעיף 1 שם. לא ברור של מי: שאלה אחת, בלי בלוק.
 2. **מה חזר:** טקסט או צילום, כל מספר לסעיף שלו, לפי סעיף 2. מה שלא קריא לא מנוחש.
-3. **ממיינים** לפי סעיף 3: בוצע, נשאר פתוח, מחכה לצד השני, משימה חדשה, תור, "לאמת מול המרשם", מסמך שהתקבל, והוראה (מידע, לא מבוצעת).
+3. **ממיינים** לפי סעיף 3: בוצע, נשאר פתוח, מחכה לצד השני, משימה חדשה, תור, "לאמת מול המרשם", מסמך שהתקבל, סותר (שתי הגרסאות נשארות, ולא בוחרים), והוראה (מידע, לא מבוצעת).
 
 ### שלב 13: הדף ונושן
 
@@ -188,7 +188,7 @@ metadata:
 
 ואחריו, רק מה שקרה בפועל, שורה לכל נושא, לפי "הדוח" ב-`returned-page.md`, ובסוף השורה "פתוח עכשיו".
 
-אחר כך: `kit.md` (`סבב חזר (YYYY-MM-DD): (השם), (N) בוצעו`), `log.md` (למשל `2026-02-18 · cancel-cancer-family 0.14.0 · סבב חזר: family/2026-02-16-page-2.md, 3 בוצעו, 2 חדשות, 1 לאמת מול המרשם`), בלוק התוצאה ושורת התחתית.
+אחר כך: `kit.md` (`סבב חזר (YYYY-MM-DD): (השם), (N) בוצעו`), `log.md` (למשל `2026-02-18 · cancel-cancer-family 1.0.0 · סבב חזר: family/2026-02-16-page-2.md, 3 בוצעו, 2 חדשות, 1 לאמת מול המרשם`), בלוק התוצאה ושורת התחתית.
 
 ## מצבים מיוחדים
 
@@ -257,6 +257,7 @@ metadata:
 
 ## מה הסקיל לא עושה
 
+- לא בוחר בין שני עדכונים סותרים. שניהם נשארים, ונשאלת שאלה אחת.
 - לא מתקשר, לא שולח ולא מעביר את הדפים. המשתמש שולח.
 - לא מחליט מי אחראי כשלא ברור, ולא משנה אחראי שכבר רשום בלי בקשה מפורשת.
 - לא כותב בדף מספר זהות, סיסמה, קוד, או מספרי חשבון, פוליסה ותביעה, ולא טלפון של בן משפחה.
@@ -272,7 +273,7 @@ metadata:
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-family 0.14.0 (contract 1)
+skill: cancel-cancer-family 1.0.0 (contract 1)
 status: done
 wrote: family/2026-02-16-tasks.md ; family/tasks-list.md (מ-inbox) ; kit.md ; log.md
 for-notion: נרשמו 3 משימות מהרשימה. אחראי נקבע ב-12 משימות
@@ -285,7 +286,7 @@ next: דף לכל אחד: "ועכשיו דף לכל בן משפחה"
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-family 0.14.0 (contract 1)
+skill: cancel-cancer-family 1.0.0 (contract 1)
 status: done
 wrote: 6 קבצים ב-family: שני דפים (page-1, page-2), כל אחד עם .html ו-.pdf ; family/2026-02-16-tasks.md (דפים) ; kit.md ; log.md
 for-notion: none
@@ -298,7 +299,7 @@ next: כשמישהו מסיים, להחזיר לכאן את הדף המסומן,
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-family 0.14.0 (contract 1)
+skill: cancel-cancer-family 1.0.0 (contract 1)
 status: done
 wrote: family/2026-02-16-page-2.md (מה חזר) ; kit.md ; log.md
 for-notion: 3 משימות ← בוצע, 2 משימות חדשות, תור אחד, ו"לאמת מול המרשם" אחת

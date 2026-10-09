@@ -4,8 +4,8 @@ description: Part of the Cancel Cancer kit by Benefits (episode 9 of 14). Packs 
 compatibility: Works in any Claude chat on a paid plan. A computer folder connected to the conversation is needed to read the documents and save the package. The Notion connector is optional. Without the folder, a small source is built from Notion and shown in the chat, to paste as Copied Text. Listening needs a Google account and Gemini Notebook, on the web and in the phone app. Writes to Notion only questions for the team, and on the phone one row in Waiting for the computer.
 metadata:
   kit: "cancel-cancer"
-  kit-version: "0.14.0"
-  skill-version: "0.9.0"
+  kit-version: "1.0.0"
+  skill-version: "1.0.0"
   contract: "1"
   episode: "9"
   after: "cancel-cancer-doctor-prep"
@@ -14,7 +14,7 @@ metadata:
 
 # Cancel Cancer · פודקאסט אישי לכל נסיעה (פרק 9)
 
-**שורת הגרסה:** cancel-cancer-podcast 0.9.0 · ערכה 0.14.0 · חוזה 1
+**שורת הגרסה:** cancel-cancer-podcast 1.0.0 · ערכה 1.0.0 · חוזה 1
 
 הסקיל הזה אורז חבילה להאזנה ב-Gemini Notebook: אחד עד ארבעה מקורות, רק מה שקשור לנושא, הנחיה קצרה למנחים, והסבר איך מעלים ומקשיבים. המשתמש מעלה מהמחשב, ומקשיב באפליקציה בטלפון. הסקיל לא מתחבר ל-Gemini Notebook.
 
@@ -25,7 +25,7 @@ metadata:
 - `references/hosts-prompt.md`: ההנחיה למנחים. קוראים אותו לפני שכותבים אותה.
 - `references/upload-steps.md`: ההסבר למשתמש: איך מעלים, איך מקשיבים, ושלוש השורות הקבועות. קוראים אותו לפני הדוח.
 - `references/podcast-notion.md`: מה קוראים מנושן, ומה כותבים בו. קוראים אותו לפני הקריאה הראשונה לנושן.
-- `references/notion-format.md`: איך עובדים מול החיבור של Notion. קוראים אותו לפני הכתיבה הראשונה לנושן.
+- `references/notion-format.md`: איך עובדים מול החיבור של Notion. קוראים אותו לפני הקריאה הראשונה מנושן, כי בו גם הדרך לקרוא שורות.
 
 ## העקרונות
 
@@ -42,6 +42,7 @@ metadata:
 
 1. **מה התבקש:**
    - **חבילה לפודקאסט** (ברירת המחדל): "תכין לי חבילה לפודקאסט לקראת הפגישה הבאה", "תכין לי פודקאסט על מה שהרופא אמר", "אני רוצה להקשיב לזה בנסיעה", "תכין לי משהו לשמוע על הטיפול", "Make me a podcast package". ממשיכים לשלב 1.
+   - **ניתוח או תמלול של הקלטה:** טקסט שמתחיל ב"# ניתוח הקלטה" או ב"# תמלול הקלטה" שייך ל-`cancel-cancer-recording`, גם כשהוא חזר מ-Gemini Notebook. שורה אחת: "זה ניתוח של הקלטה. כתבו 'הנה הניתוח מהמחברת', והוא יישמר ב-transcripts." בלי בלוק.
    - **תשובה מהמחברת:** "הנה מה שהמחברת ענתה", או טקסט שהמשתמש אומר שהגיע מ-Gemini Notebook. ממשיכים לחלק ב.
    - **"תעלה אתה", "איך משתפים", "בלי (X)", משהו דחוף, או שאלה רפואית:** הסעיפים שלהם ב"מצבים מיוחדים". דחוף קודם לכל דבר אחר.
 2. **התיקייה:** לפי החוזה (סעיף 5). אין גישה: הסעיף "בלי תיקייה". `kit.md` לא נמצא: המשפט מהחוזה, וממשיכים בשמות ברירת המחדל. קוראים את `rules.md` ופועלים לפיו.
@@ -97,7 +98,7 @@ metadata:
 
 ### שלב 5: שומרים
 
-1. **`podcast` חסרה,** או מסומנת `(לא נוצרה)`: יוצרים אותה לפי החוזה (סעיף 5, סעיף 1), עם `README.md` של שורה אחת, ומוסיפים לה שורה בסוף טבלת התיקיות ב-`kit.md`: `| podcast | podcast | 9 |`. שורה אחת בדוח.
+1. **`podcast` חסרה,** או מסומנת `(לא נוצרה)`: יוצרים אותה לפי החוזה (סעיף 5.5, והתפקיד בסעיף 1), עם `README.md` של שורה אחת, ומוסיפים לה שורה בסוף טבלת התיקיות ב-`kit.md`: `| podcast | podcast | 9 |`. שורה אחת בדוח.
 2. **התיקייה של החבילה:** `podcast/YYYY-MM-DD-(נושא)/`, לפי החוזה (סעיף 15). בפרק על פגישה, התאריך של הפגישה. בכל פרק אחר, של היום. הנושא קצר, באותה שפה של שמות התיקיות, ובלי פרט מזהה. למשל `meeting`, `treatment`, `after-meeting`.
 3. **בתוכה רק המקורות:** `1-(נושא).md`, ואם יש עוד, `2-...`, עד `4-`. שום קובץ אחר.
 4. **ההנחיה:** ליד התיקייה, `podcast/YYYY-MM-DD-(נושא)-prompt.md`, לפי "הקובץ של ההנחיה" ב-`hosts-prompt.md`.
@@ -132,7 +133,7 @@ metadata:
 אחר כך:
 
 1. **`kit.md`:** השורה של הסקיל בטבלת הסקילים (אין עדיין: מוסיפים): `חבילה לפודקאסט (YYYY-MM-DD): מקורות (N)`, עם התאריך של התיקייה. בלי הנושא, כי ב-`kit.md` לא נכתבות אבחנות.
-2. **`log.md`:** למשל `2026-01-26 · cancel-cancer-podcast 0.9.0 · חבילה לפודקאסט: podcast/2026-01-27-meeting/ (מקור 1, 14,200 תווים), הנחיה: podcast/2026-01-27-meeting-prompt.md`.
+2. **`log.md`:** למשל `2026-01-26 · cancel-cancer-podcast 1.0.0 · חבילה לפודקאסט: podcast/2026-01-27-meeting/ (מקור 1, 14,200 תווים), הנחיה: podcast/2026-01-27-meeting-prompt.md`.
 3. **בלוק התוצאה, ואז שורת התחתית.**
 
 ## חלק ב: תשובה מהמחברת
@@ -245,7 +246,7 @@ metadata:
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-podcast 0.9.0 (contract 1)
+skill: cancel-cancer-podcast 1.0.0 (contract 1)
 status: done
 wrote: podcast/2026-01-27-meeting/1-meeting.md ; podcast/2026-01-27-meeting-prompt.md ; kit.md ; log.md
 for-notion: none
@@ -258,7 +259,7 @@ next: בפגישה, להקליט רק אחרי שמבקשים רשות (פרק 1
 
 ```text
 === CANCEL CANCER RESULT ===
-skill: cancel-cancer-podcast 0.9.0 (contract 1)
+skill: cancel-cancer-podcast 1.0.0 (contract 1)
 status: done
 wrote: kit.md ; log.md
 for-notion: נרשמו 2 שאלות לצוות. אחת כבר הייתה שם
